@@ -1,3 +1,9 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+}
 #container{
     display: grid;
     grid-template-areas: 
@@ -36,6 +42,7 @@ nav>a{
     margin: auto;
     text-decoration: none;
     color:black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .desc{
