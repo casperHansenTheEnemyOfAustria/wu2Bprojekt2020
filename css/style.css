@@ -2,7 +2,7 @@
     display: grid;
     grid-template-areas: 
     "he he"
-    "de na"
+    "de de"
     "co co"
     "so so"
     "pr pr"
@@ -22,16 +22,71 @@ header{
     margin:auto;
 }
 nav{
-    grid-area: na;
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    top:40%;
+    right: 4px;
+    background:rgba(180, 178, 178, 0.3);
+    border-radius: 1em;
+    height:30vh;
+    width: 27vw;
 }
+nav>a{
+    margin: auto;
+    text-decoration: none;
+    color:black;
+}
+
 .desc{
     grid-area: de;
 }
 .concerts{
     grid-area: co;
+    display:grid;
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4";
+    gap:9px;
+}
+.eventText{
+    font-size: 2em;
+    margin:7px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.concerts>.a1{
+    grid-area: a1;
+    background:whitesmoke;
+}
+.concerts>.a2{
+    grid-area: a2;
+    background:whitesmoke;
+}
+.concerts>.a3{
+    grid-area: a3;
+    background:whitesmoke;
+}
+.concerts>.a4{
+    grid-area: a4;
+    background:whitesmoke;
 }
 .socMedia{
     grid-area: so;
+    display:flex;
+    flex-direction: column;
+
+}
+.socMedia>article{
+    background:whitesmoke;
+    height:20vh;
+    margin-top:9px;
+    display:flex;
+}
+.socLink{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:9px;
+
 }
 .projects{
     grid-area: pr;
