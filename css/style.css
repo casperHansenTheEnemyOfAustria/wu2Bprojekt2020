@@ -31,7 +31,7 @@ nav{
     position: fixed;
     display:flex;
     flex-direction: column;
-    top:40%;
+    top:20%;
     right: 4px;
     background:rgba(180, 178, 178, 0.3);
     border-radius: 1em;
@@ -44,9 +44,9 @@ nav>a{
     color:black;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .desc{
     grid-area: de;
+
 }
 .concerts{
     grid-area: co;
@@ -55,6 +55,7 @@ nav>a{
     "a1 a2"
     "a3 a4";
     gap:9px;
+
 }
 .eventText{
     font-size: 2em;
@@ -97,10 +98,38 @@ nav>a{
 }
 .projects{
     grid-area: pr;
+    display:grid;
+    grid-template-areas: 
+    "a1 a2";
+    gap: 9px;
+    margin-top: 9px;;
+
+}
+
+.proj1{
+    grid-area: a1;
+    background: whitesmoke;
+    padding: 9px;
+}
+.proj2{
+    grid-area: a2;
+    background: whitesmoke;
+    padding: 9px;
 }
 .lyrics{
     grid-area: ly;
+
+}
+
+.onscroll{
+    opacity: 0;
+    transition: opacity .5s .25s ease-out;
+}
+.onscroll.animation{
+    opacity: 1;
 }
 footer{
     grid-area: ft;
 }
+
+
