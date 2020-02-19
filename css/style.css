@@ -27,6 +27,9 @@ header{
     width: 100px;
     margin:auto;
 }
+.albumcovers{
+    width: 30vw;
+}
 nav{
     position: fixed;
     display:flex;
@@ -46,7 +49,9 @@ nav>a{
 }
 .desc{
     grid-area: de;
-
+}
+.storyHeader{
+    text-align:center;
 }
 .concerts{
     grid-area: co;
@@ -65,18 +70,26 @@ nav>a{
 .concerts>.a1{
     grid-area: a1;
     background:whitesmoke;
+    text-decoration: none;
+    color: black;
 }
 .concerts>.a2{
     grid-area: a2;
     background:whitesmoke;
+    text-decoration: none;
+    color: black;
 }
 .concerts>.a3{
     grid-area: a3;
     background:whitesmoke;
+    text-decoration: none;
+    color: black;
 }
 .concerts>.a4{
     grid-area: a4;
     background:whitesmoke;
+    text-decoration: none;
+    color: black;
 }
 .socMedia{
     grid-area: so;
@@ -107,11 +120,15 @@ nav>a{
 }
 
 .proj1{
+    display:flex;
+    flex-direction: column;
     grid-area: a1;
     background: whitesmoke;
     padding: 9px;
 }
 .proj2{
+    flex-direction: column;
+    display:flex;
     grid-area: a2;
     background: whitesmoke;
     padding: 9px;
@@ -120,7 +137,6 @@ nav>a{
     grid-area: ly;
 
 }
-
 .onscroll{
     opacity: 0;
     transition: opacity .5s .25s ease-out;
@@ -131,5 +147,18 @@ nav>a{
 footer{
     grid-area: ft;
 }
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
 
 
