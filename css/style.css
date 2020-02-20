@@ -2,7 +2,44 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    margin:0;
+    margin:9px;
+    background:rgb(222, 215, 228);
+}
+nav{
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    top:16%;
+    right: -28vw;
+    background:rgb(155, 175, 172);
+    border-radius: 1em;
+    height:30vh;
+    width: 27vw;
+    transition: right .2s 0s ease-out; 
+    box-shadow: -5px 9px 17px -1px rgba(0,0,0,0.56);
+}
+nav.show{
+    right:4px;
+    transition: right .2s 0s ease-out; 
+}
+nav>a{
+    margin: auto;
+    text-decoration: none;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+.navButton{
+    position:fixed;
+    width: 14vw;
+    right:7vw;
+    top:7vw;
+    transform: rotate(0deg);
+    transition: transform .5s 0s ease;
+}
+.navButton.flip{
+    transform: rotate(180deg);
+    transition: transform .5s 0s ease;
 }
 #container{
     display: grid;
@@ -24,28 +61,11 @@ header{
     display:flex;
 }
 .logo{
-    width: 100px;
+    width: 40vw;
     margin:auto;
 }
 .albumcovers{
     width: 30vw;
-}
-nav{
-    position: fixed;
-    display:flex;
-    flex-direction: column;
-    top:20%;
-    right: 4px;
-    background:rgba(180, 178, 178, 0.3);
-    border-radius: 1em;
-    height:30vh;
-    width: 27vw;
-}
-nav>a{
-    margin: auto;
-    text-decoration: none;
-    color:black;
-    font-family: 'Times New Roman', Times, serif;
 }
 .desc{
     grid-area: de;
@@ -107,7 +127,8 @@ nav>a{
     margin-top:auto;
     margin-bottom:auto;
     margin-left:9px;
-
+    text-decoration: none;
+    color:black;
 }
 .projects{
     grid-area: pr;
@@ -139,10 +160,11 @@ nav>a{
 }
 .onscroll{
     opacity: 0;
-    transition: opacity .5s .25s ease-out;
+    
 }
 .onscroll.animation{
     opacity: 1;
+    transition: opacity .3s .15s ease-in;
 }
 footer{
     grid-area: ft;
