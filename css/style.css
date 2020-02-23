@@ -5,18 +5,229 @@ body{
     margin:9px;
     background:rgb(222, 215, 228);
 }
+#container{
+    display: grid;
+    grid-template-areas: 
+    "he na"
+    "de de"
+    "co co"
+    "so so"
+    "pr pr"
+    "ly ly"
+    "ft ft"
+    ;
+    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 5fr 0.5fr;
+    grid-template-columns:6fr 1fr;
+    height: 500vh;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+header{
+    grid-area: he;
+    display:flex;
+}
+nav{display: none;
+}
+.navDt{
+    grid-area: na;
+    display: flex;
+    justify-content: space-around;
+}
+.navDt>a{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+}
+.logo{
+    width: 20vw;
+    margin:auto;
+}
+.desc{
+    grid-area: de;
+}
+.concerts{
+    grid-area: co;
+    display:grid;
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4";
+    gap:30px;
+}
+.concerts>.a1{
+    grid-area: a1;
+    background:whitesmoke;
+    text-decoration: none;
+    color: black;
+}
+.concerts>.a2{
+    grid-area: a2;
+    background:whitesmoke;
+    text-decoration: none;
+    color: black;
+}
+.concerts>.a3{
+    grid-area: a3;
+    background:whitesmoke;
+    text-decoration: none;
+    color: black;
+}
+.concerts>.a4{
+    grid-area: a4;
+    background:whitesmoke;
+    text-decoration: none;
+    color: black;
+}
+.socMedia{
+    grid-area: so;
+    display:flex;
+    flex-direction: column;
+
+}
+.socMedia>article{
+    background:whitesmoke;
+    height:20vh;
+    margin-top:30px;
+    display:flex;
+}
+.socLink{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:40px;
+    text-decoration: none;
+    color:black;
+}
+.projects{
+    grid-area: pr;
+    display:grid;
+    grid-template-areas: 
+    "a1 a2";
+    gap: 30px;
+    margin-top: 30px;
+}
+.proj1{
+    display:flex;
+    flex-direction: column;
+    grid-area: a1;
+    background: whitesmoke;
+    padding: 20px;
+}
+.proj2{
+    flex-direction: column;
+    display:flex;
+    grid-area: a2;
+    background: whitesmoke;
+    padding: 20px;
+}
+.lyrics{
+    margin-top: 9px;
+    grid-area: ly;
+    display: grid;
+    grid-template-areas: 
+    "h"
+    "a1";
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 9px;
+}
+.odinLyrics{
+    grid-area: a1;
+    background: whitesmoke;
+    display: flex;
+    text-decoration: none;
+    color:black;
+}
+.odinLyrics>h3{
+    margin:auto;
+}
+.lyricContainer{
+    display: grid;
+    grid-template-areas: 
+    "he"
+    "img"
+    "ma"
+    "ft";
+    width: 96vw;
+    gap:9px;
+}
+
+
+.albumcovers{
+    width: 15vw;
+}
+.lyricCovers{
+    width:10vw;
+    height:10vw;
+    margin:auto;
+}
+.lyrics>h2{
+    grid-area: h;
+    margin: auto;
+}
+.navButton{
+    display:none;
+}
+
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+.storyHeader{
+    text-align:center;
+}
+.eventText{
+    font-size: 7em;
+    margin:7px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.onscroll{
+    transform: scale(0.5);
+}
+.onscroll.animation{
+    transform: scale(1);
+    transition: transform 0.25s 0s ease-in;
+}
+
+
+@media only screen and (max-width: 600px){
+#container{
+    margin-left: 0;
+    margin-right: 0;
+    width:96vw;
+}
 nav{
     position: fixed;
     display:flex;
     flex-direction: column;
     top:16%;
-    right: -28vw;
+    right: -29vw;
     background:rgb(155, 175, 172);
     border-radius: 1em;
     height:30vh;
     width: 30vw;
     transition: right .2s 0s ease-out; 
     box-shadow: -5px 9px 17px -1px rgba(0,0,0,0.56);
+}
+.navDt{display: none;
 }
 nav.show{
     right:4px;
@@ -41,37 +252,12 @@ nav>a{
     transform: rotate(180deg);
     transition: transform .5s 0s ease;
 }
-#container{
-    display: grid;
-    grid-template-areas: 
-    "he he"
-    "de de"
-    "co co"
-    "so so"
-    "pr pr"
-    "ly ly"
-    "ft ft"
-    ;
-    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 5fr 0.5fr;
-    grid-template-columns:6fr 1fr;
-    height: 500vh;
-}
-header{
-    grid-area: he;
-    display:flex;
-}
 .logo{
     width: 40vw;
     margin:auto;
 }
 .albumcovers{
     width: 30vw;
-}
-.desc{
-    grid-area: de;
-}
-.storyHeader{
-    text-align:center;
 }
 .concerts{
     grid-area: co;
@@ -80,7 +266,6 @@ header{
     "a1 a2"
     "a3 a4";
     gap:9px;
-
 }
 .eventText{
     font-size: 2em;
@@ -136,10 +321,8 @@ header{
     grid-template-areas: 
     "a1 a2";
     gap: 9px;
-    margin-top: 9px;;
-
+    margin-top: 9px;
 }
-
 .proj1{
     display:flex;
     flex-direction: column;
@@ -155,8 +338,65 @@ header{
     padding: 9px;
 }
 .lyrics{
+    margin-top: 9px;
     grid-area: ly;
-
+    display: grid;
+    grid-template-areas: 
+    "h"
+    "a1";
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 9px;
+}
+.lyrics>h2{
+    grid-area: h;
+    margin: auto;
+}
+.odinLyrics{
+    grid-area: a1;
+    background: whitesmoke;
+    display: flex;
+    text-decoration: none;
+    color:black;
+}
+.odinLyrics>h3{
+    margin:auto;
+}
+.lyricCovers{
+    width:30vw;
+    height:30vw;
+    margin:auto;
+}
+.lyricContainer{
+    display: grid;
+    grid-template-areas: 
+    "he"
+    "img"
+    "ma"
+    "ft";
+    width: 96vw;
+    gap:9px;
+}
+.lyricContainer>h1{
+    grid-area:he;
+    margin:auto;
+}
+.lyricContainer>main{
+    grid-area: ma;
+    background:whitesmoke;
+    padding: 9px;
+    border-radius: 1em;
+}
+.lyricContainer>a{
+    grid-area: ft;
+    display: flex;
+}
+.backButton{
+    margin:auto;
+    width: 20vw;
+}
+footer{
+    grid-area: ft;
 }
 .onscroll{
     opacity: 0;
@@ -166,8 +406,9 @@ header{
     opacity: 1;
     transition: opacity .25s .17s ease-in;
 }
-footer{
-    grid-area: ft;
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
 }
 h2{
     font-family: 'Times New Roman', Times, serif;
@@ -181,6 +422,6 @@ p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1em;
 }
-
+}
 
 
