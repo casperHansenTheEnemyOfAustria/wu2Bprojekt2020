@@ -14,7 +14,7 @@ nav{
     background:rgb(155, 175, 172);
     border-radius: 1em;
     height:30vh;
-    width: 27vw;
+    width: 30vw;
     transition: right .2s 0s ease-out; 
     box-shadow: -5px 9px 17px -1px rgba(0,0,0,0.56);
 }
@@ -164,7 +164,7 @@ header{
 }
 .onscroll.animation{
     opacity: 1;
-    transition: opacity .3s .15s ease-in;
+    transition: opacity .25s .17s ease-in;
 }
 footer{
     grid-area: ft;
