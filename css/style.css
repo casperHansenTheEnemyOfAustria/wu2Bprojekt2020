@@ -16,7 +16,7 @@ body{
     "ly ly"
     "ft ft"
     ;
-    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 5fr 0.5fr;
+    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 6fr 0.5fr;
     grid-template-columns:6fr 1fr;
     height: 500vh;
     width: 50vw;
@@ -148,9 +148,31 @@ nav{
     "img"
     "ma"
     "ft";
-    width: 96vw;
+    width: 50vw;
     gap:9px;
+    margin:auto;
 }
+.lyricContainer>h1{
+    grid-area:he;
+    margin:auto;
+    
+}
+.lyricContainer>main{
+    grid-area: ma;
+    background:whitesmoke;
+    padding: 20px;
+    border-radius: 2em;
+}
+.lyricContainer>a{
+    grid-area: ft;
+    display: flex;
+}
+.lyricContainer>.lyricCovers{
+    grid-area: img;
+    width: 20vw;
+    height:20vw;
+}
+
 
 
 .logo{
@@ -172,12 +194,16 @@ nav{
 .navButton{
     display:none;
 }
+.backButton{
+    margin:auto;
+    width: 10vw;
+}
 
 
 
 h1{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
+    font-size: 4em;
 }
 h2{
     font-family: 'Times New Roman', Times, serif;
@@ -222,6 +248,11 @@ body{
     margin-left: 0;
     margin-right: 0;
     width:96vw;
+    grid-template-rows: 1fr 2fr 4fr 4fr 5fr 5fr 0.5fr;
+    gap: 20px;
+}
+header{
+    background:none;
 }
 nav{
     position: fixed;
@@ -355,7 +386,7 @@ nav>a{
     grid-template-areas: 
     "h"
     "a1";
-    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr ;
     grid-template-columns: 1fr;
     gap: 9px;
 }
@@ -379,31 +410,14 @@ nav>a{
     margin:auto;
 }
 .lyricContainer{
-    display: grid;
-    grid-template-areas: 
-    "he"
-    "img"
-    "ma"
-    "ft";
     width: 96vw;
     gap:9px;
 }
-.lyricContainer>h1{
-    grid-area:he;
-    margin:auto;
-}
 .lyricContainer>main{
-    grid-area: ma;
-    background:whitesmoke;
     padding: 9px;
     border-radius: 1em;
 }
-.lyricContainer>a{
-    grid-area: ft;
-    display: flex;
-}
 .backButton{
-    margin:auto;
     width: 20vw;
 }
 footer{
