@@ -3,8 +3,10 @@ html{
 }
 body{
 
-    background:rgb(222, 215, 228);
+    background:#ded7e4;
 }
+
+/* Grids and grid items */
 #container{
     display: grid;
     grid-template-areas: 
@@ -175,7 +177,7 @@ nav{
 }
 
 
-
+/* Images */
 .logo{
     width: 20vw;
     margin:auto;
@@ -207,7 +209,7 @@ nav{
 }
 
 
-
+/* Text modifiers */
 h1{
     font-family: 'Times New Roman', Times, serif;
     font-size: 4em;
@@ -240,7 +242,7 @@ p{
     margin: auto;
 }
 
-
+/* Animations */
 .onscroll{
     transform: scale(0.5);
 }
@@ -249,12 +251,14 @@ p{
     transition: transform 0.25s 0s ease-in;
 }
 
-
+/* For phones */
 @media only screen and (max-width: 600px){
 
 body{
     margin: 9px;
 }
+
+/* Grids and grid items */
 #container{
     grid-template-areas: 
     "he he"
@@ -312,7 +316,7 @@ nav>a{
 }
 .navButton.flip{
     transform: rotate(180deg);
-    transition: transform .5s 0s ease;
+    transition: transform 0.5s 0s ease;
 }
 .concerts{
     grid-area: co;
@@ -383,7 +387,7 @@ footer{
 }
 
 
-
+/* Text modifiers */
 h1{
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
@@ -407,6 +411,7 @@ p{
 }
 
 
+/* Images */
 .logo{
     width: 40vw;
     margin:auto;
@@ -433,7 +438,7 @@ p{
     width: 20vw;
 }
 
-
+/* Animations */
 .onscroll{
     opacity: 0;  
 }
