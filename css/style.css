@@ -18,7 +18,7 @@ body{
     "ly ly"
     "ft ft"
     ;
-    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 6fr 0.5fr;
+    grid-template-rows: 1fr 4fr 5fr 4fr 5fr 4fr 0.5fr;
     grid-template-columns:6fr 1fr;
     height: 500vh;
     width: 50vw;
@@ -62,24 +62,36 @@ nav{
     background:whitesmoke;
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction:column;
+    padding:20px;
 }
 .concerts>.a2{
     grid-area: a2;
-    background:whitesmoke;
+    background:rgb(235, 235, 235);
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction:column;
+    padding:20px;
 }
 .concerts>.a3{
     grid-area: a3;
-    background:whitesmoke;
+    background:rgb(235, 235, 235);
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction:column;
+    padding:20px;
 }
 .concerts>.a4{
     grid-area: a4;
     background:whitesmoke;
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction:column;
+    padding:20px;
 }
 .socMedia{
     grid-area: so;
@@ -112,7 +124,7 @@ nav{
     display:flex;
     flex-direction: column;
     grid-area: a1;
-    background: whitesmoke;
+    background: rgb(235, 235, 235);
     padding: 20px;
 }
 .proj2{
@@ -181,6 +193,10 @@ nav{
 .logo{
     width: 20vw;
     margin:auto;
+}
+.promoLogo{
+    width: 10vw;
+    margin: auto;
 }
 .albumcovers{
     width: 15vw;
@@ -272,8 +288,9 @@ body{
     margin-left: 0;
     margin-right: 0;
     width:96vw;
-    grid-template-rows: 1fr 2fr 4fr 4fr 5fr 5fr 0.5fr;
+    grid-template-rows: 1fr 2fr 4fr 4fr 5fr 3fr 0.5fr;
     gap: 20px;
+    height: 480vh;
 }
 header{
     background:none;
@@ -326,6 +343,11 @@ nav>a{
     "a3 a4";
     gap:9px;
 }
+.concerts>.a1,.concerts>.a2,.concerts>.a3,.concerts>.a4{
+    padding:-20px;
+    flex-direction: column-reverse;
+}
+
 .socMedia>article{
     background:whitesmoke;
     height:20vh;
@@ -415,6 +437,9 @@ p{
 .logo{
     width: 40vw;
     margin:auto;
+}
+.promoLogo{
+    width:30vw;
 }
 .albumcovers{
     width: 30vw;
