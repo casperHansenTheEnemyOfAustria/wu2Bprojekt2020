@@ -2,7 +2,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-
     background:#ded7e4;
 }
 
@@ -68,7 +67,7 @@ nav{
 }
 .concerts>.a2{
     grid-area: a2;
-    background:rgb(235, 235, 235);
+    background:#ebebeb;
     text-decoration: none;
     color: black;
     display: flex;
@@ -174,7 +173,7 @@ nav{
 }
 .lyricContainer>main{
     grid-area: ma;
-    background:whitesmoke;
+    background:#f5f5f5;
     padding: 20px;
     border-radius: 2em;
 }
