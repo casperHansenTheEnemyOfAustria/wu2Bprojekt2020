@@ -343,7 +343,7 @@ nav>a{
     gap:9px;
 }
 .concerts>.a1,.concerts>.a2,.concerts>.a3,.concerts>.a4{
-    padding:-20px;
+    padding:20px;
     flex-direction: column-reverse;
 }
 
